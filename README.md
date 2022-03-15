@@ -1,4 +1,4 @@
-# TODO List App with Express, Node.js, MongoDB and EJS
+# TODO List App
 
 ## Introduction
 
