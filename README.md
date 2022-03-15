@@ -2,26 +2,56 @@
 
 ## Introduction
 
-Backend following REST architecture made on Express framework using MongoDB as database and built tools to use sugary Javascript.
+TODO List App exposes a RESTful API allowing a user to manage a private TODO list. The application includes a frontend implementation too.
 
-### About
+The exposed interface allows the following operations:
+- List TODO lists for a user
+- Create/delete a TODO list for a user
+- A TODO list can contain TODO list elements - a TODO list element is a text up to 2048 characters
+- Add/remove/update an element of the TODO list
 
-The backend is a fully RESTful web API, scalable for further developments, which follows basic principles like <b>Single Responsibility</b> and <b>Separation of Concerns</b>. 
+## About
 
-The application has been developed by using Express, Node.js, MongoDB and EJS.
+The backend is a fully RESTful web API, scalable for further developments, which follows basic principles like <b>DRY</b>, <b>Single Responsibility</b> and <b>Separation of Concerns</b>. 
 
-The application includes a frontend implementation too. A connection with MongoDB Atlas by using any public IP, gives the possibily to run the full application from any device.
+The application has been developed by using Express, Node.js, MongoDB and EJS. The established connection with MongoDB Atlas accepts all IPs and gives the possibily to run the full application from any device.
 
-## Steps to run/build
+## Setup up the environment
 
-- run `npm install` in current directory to install all dependencies
-- run `npm run dev` to start development server
-- run `npm run prod` to start production server
+### Prerequisites
 
-  or
-  
-- run `npm run build` to build the generate a dist folder with transpiled code
+You should have Node.js and NPM installed on your machine. In case you don't already have it, download the setup .exe from here: `https://nodejs.dev/download`
 
-### Load the web application
+#### Verify installation
 
-Once your server is up and running, load the following URL on your browser: `http://localhost:3000/`# todo-task-list
+Open a command prompt and enter the following:
+
+```
+node -v
+```
+
+The system should display the Node.js version installed on your system. You can do the same for NPM:
+
+```
+npm -v
+```
+
+### Installation and building
+
+To install TODO List App all dependencies, you can use the following command within your terminal.
+
+```
+npm install
+```
+
+To build the generate a dist folder with transpiled code run `npm run build` 
+
+### Run the application
+
+Start the development server by running the following command:
+
+```
+npm run dev
+```
+
+Once your server is up and running, load the following URL on your browser: `http://localhost:3000/`
