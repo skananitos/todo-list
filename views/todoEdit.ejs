@@ -1,0 +1,45 @@
+<%- include('header'); -%>									
+	<ul>												
+		<% todoTasks.forEach(details => { %>
+			<li>
+				<hr>
+				<div><%= details.name %>
+						<% var radId = Math.random().toString(36).substr(2, 7); %>
+						<a href="/add/" class="add" data-toggle="collapse" data-target="#<%= radId %>" aria-expanded="false" aria-controls="<%= radId %>">
+							<span class="fa fa-plus-square"></span>
+						</a>					
+					<p></p>
+					<div class="collapse" id="<%= radId %>">				
+						<form action="/add-element/<%= details._id %>" method="POST">
+							<input type="text" name="content" placeholder="Your new task..." for="myfile">
+							<!-- <label class="custom-file-upload"><input type="file"/><span class="fas fa-file"></span></label> -->
+							<button type="submit"><span class="fa fa-arrow-right"></span></button>
+						</form><br/></br/>
+					</div>
+				</div>
+				<div><% for(i in details.tasks){ %>
+						<% if (details.tasks[i]._id == itemID) { %>
+							<li class="in">
+								<form action="/edit-element/<%= details.tasks[i]._id %>" method="POST">
+									<input type="text" value="<%= details.tasks[i].name %>" name="content">
+									<button type="submit">Confirm</button>
+									<a href="/" class="cancel">Cancel</a>
+								</form>
+							</li>
+						<% } else { %>
+							<div ><%= details.tasks[i].name %>
+								<a href="/edit-element/<%= details.tasks[i]._id %>" class="edit">
+									<span class="fas fa-edit"></span>
+								</a>
+								<a href="/remove-element/<%= details.tasks[i]._id %>" class="remove">
+									<span class="fas fa-times"></span>
+								</a>
+							</div>
+						<% } %>
+				<% } %></div>
+				<a href="/remove/<%= details._id %>" class="remove">
+					<span class="fas fa-times"></span>
+				</a>
+			</li>
+		<% }) %>
+<%- include('footer'); -%>	
