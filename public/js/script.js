@@ -8,7 +8,7 @@ $(add_button).click(function(e){ //on add input button click
 e.preventDefault();
     if(x < max_fields){ //max input box allowed
         x++; //text box increment
-        $(wrapper).append('<div class="input_fields_wrap"><input type="text" name="content" placeholder="Type the name of your task..."><button class="remove_field"><span class="fa fa-remove"></span></button><br/><br/></div>'); //add input box
+        $(wrapper).append('<div class="input_fields_wrap"><input type="text" name="content" placeholder="Type the name of your task..." required><button class="remove_field"><span class="fa fa-remove"></span></button><br/><br/></div>'); //add input box
     }
 });
 
