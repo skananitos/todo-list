@@ -35,7 +35,7 @@ The system should display the Node.js version installed on your system. You can 
 ```
 npm -v
 ```
-IMPORTANT: Rename db.env file to .env
+<b>IMPORTANT:</b> Rename db.env file to .env
 
 ### Installation and building
 
